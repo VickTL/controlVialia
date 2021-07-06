@@ -1,7 +1,92 @@
 html, body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 canvas {
   display: block;
+}
+
+h1{
+  /*margin-left: 4%;*/
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+    font-size: 46px;
+}
+
+h2{
+
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-size: 40px;
+}
+
+h3{
+
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+  margin-left: 4%;
+  position: absolute;
+  z-index: 1;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15vh; /* Specified height */
+  background: #adbbff; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider::-moz-range-thumb {
+  width: 55px;
+  height: 55px;
+  border-radius: 80%;
+  background: #6897fc;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10vw;
+  height: 15vh;
+  /*border-radius: 50%;*/
+  background: #346eeb;
+  cursor: pointer;
+}
+
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+
+.button {
+  border: none;
+  color: white;
+  width: 100%;
+  padding-top: 12px ;
+  padding-bottom:12px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 86px;
+  margin: 22px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #346eeb;
+}
+
+.button1:hover {
+  background-color: #6897fc;
+  color: white;
 }
