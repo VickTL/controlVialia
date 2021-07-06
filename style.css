@@ -24,15 +24,18 @@ h2{
 h3{
 
   font-family: 'Amatic SC', cursive;
-  font-size: 36px;
+  font-size: 406%;
   margin-left: 4%;
   position: absolute;
   z-index: 1;
+
 }
+
+
 
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
+  /*appearance: none;*/
   width: 100%; /* Full-width */
   height: 15vh; /* Specified height */
   background: #adbbff; /* Grey background */
@@ -40,6 +43,11 @@ h3{
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
 }
 
 .slider::-moz-range-thumb {
@@ -58,7 +66,6 @@ h3{
   background: #346eeb;
   cursor: pointer;
 }
-
 
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
