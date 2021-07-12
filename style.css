@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   position: relative;
+
 }
 canvas {
   display: block;
@@ -26,25 +27,199 @@ h3{
   font-family: 'Amatic SC', cursive;
   font-size: 406%;
   margin-left: 4%;
-  position: absolute;
   z-index: 1;
+  color: black;
+
+}
+
+.numeroClase{
+    position: absolute;
+    top: 18%;
+    bottom: 82%;
+}
+
+.grosorClase{
+    position: absolute;
+    top: 36%;
+    bottom: 64%;
+}
+
+.amplitudClase{
+    position: absolute;
+    top: 55%;
+    bottom: 45%;
 
 }
 
 
+input[type="range"] {
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 10vh;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+
+::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5%; /* 1 */
+    height: 10vh;
+    background: #fff;
+    box-shadow: -100vw 0 0 100vw dodgerblue;
+    border: 2px solid #999; /* 1 */
+}
+
+::-moz-range-track {
+    height: 40px;
+    background: #ddd;
+}
+
+::-moz-range-thumb {
+    background: #fff;
+    height: 40px;
+    width: 20px;
+    border: 3px solid #999;
+    border-radius: 0 !important;
+    box-shadow: -100vw 0 0 100vw dodgerblue;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower {
+    background: dodgerblue;
+}
+
+::-ms-thumb {
+    background: #fff;
+    border: 2px solid #999;
+    height: 40px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after {
+    display: none;
+}
+
+::-ms-ticks-before {
+    display: none;
+}
+
+::-ms-track {
+    background: #ddd;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip {
+    display: none;
+}
+
+/*
+range {
+  display: inline-block;
+  margin: 36px 20px 20px
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  position: relative
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 2px;
+  border: none;
+  border-radius: 3px
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 510%;
+  background: #141414;
+  border: 2px solid #515151;
+  margin-top: -5px;
+  cursor: pointer
+}
+
+.focused::-webkit-slider-thumb {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.15)
+}
+
+.clicked::-webkit-slider-thumb {
+  -webkit-transform: scale(1.5)
+}
+
+.disabled::-webkit-slider-thumb {
+  -webkit-transform: scale(0.9);
+  box-shadow: 0 0 0 3px #141414;
+  background: #515151 !important;
+  border-color: #515151 !important
+}
+
+input[type=range]:focus {
+  outline: none
+}
+
+.rangeM input[type=range].disabled::-webkit-slider-runnable-track {
+  background: #515151!important
+}
+
+.rangeM input[type=range]::-webkit-slider-thumb {
+  background: #3f51b5;
+  border-color: #3f51b5
+}
+
+.range:hover input[type=range]:before {
+  color: white;
+  content: '50';
+  position: absolute;
+  font-family: Roboto Slab;
+  top: -49px;
+  background: #3f51b5;
+  padding: 8px 0 3px;
+  font-size: 14px;
+  width: 30px;
+  text-align: center;
+  border-radius: 100% 100% 0 0
+}
+
+.range:hover input[type=range]:after {
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: 50px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 8px solid #3f51b5;
+  font-family: Roboto Slab
+}
 
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   /*appearance: none;*/
-  width: 100%; /* Full-width */
-  height: 15vh; /* Specified height */
-  background: #adbbff; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+/*  width: 100%; /* Full-width */
+/*  height: 15vh; /* Specified height */
+/*  background: #adbbff; /* Grey background */
+/*  outline: none; /* Remove outline */
+/*  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+/*  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+/*  transition: opacity .2s;
 }
-
+*/
 /* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
@@ -91,9 +266,24 @@ h3{
   background-color: white;
   color: black;
   border: 2px solid #346eeb;
+  float:
 }
 
 .button1:hover {
   background-color: #6897fc;
   color: white;
+}
+
+#colores{
+
+  width: 100%;
+  height: 20%;
+
+}
+
+#origen{
+
+  width: 100%;
+  height: 100%;
+
 }
