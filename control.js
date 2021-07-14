@@ -95,7 +95,7 @@ var oscPort = new osc.WebSocketPort({
 });
 
 oscPort.on("ready", function () {
-    if( ) {
+    /* if( ) {
         oscPort.send({
             address: "/nParticulas",
             args: [
@@ -117,14 +117,14 @@ oscPort.on("ready", function () {
             }
         ]
     });
-
+*/
     document.getElementById("botonReset").onclick = function() {
         oscPort.send({
             address: "/restart"
         });
     }
 
-
+/*
     oscPort.send({
         address: "/tamParticulas",
         args: [
@@ -153,5 +153,5 @@ oscPort.on("ready", function () {
                 value: 440
             }
         ]
-    });
+    }); */
 });
