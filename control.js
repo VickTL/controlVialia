@@ -8,7 +8,7 @@ var s1 = function(sketch) {
 
   sketch.setup = function() {
     let c1 = sketch.createCanvas(document.getElementById('colores').offsetWidth, document.getElementById('colores').offsetHeight);
-    c1.position(0,0);
+    //c1.position(0,0);
 
     cx = c1.width/2;
     cy = c1.height/2;
@@ -21,7 +21,7 @@ var s1 = function(sketch) {
     sketch.image(img, 0, 0, w-50, h);
 
     sketch.stroke(255); sketch.strokeWeight(2); sketch.noFill();
-    sketch.circle(cx, cy, 15);
+    sketch.circle(cx, cy, 25);
 
     if(sketch.mouseIsPressed && sketch.mouseX<w-50 && sketch.mouseX>0 && sketch.mouseY>0 && sketch.mouseY<h) {
       cx = sketch.mouseX;
@@ -55,7 +55,7 @@ var s2 = function(sketch) {
 
    sketch.setup = function() {
      let c2 = sketch.createCanvas(document.getElementById('origen').offsetWidth, document.getElementById('origen').offsetHeight);
-     c2.position(0, document.getElementById('colores').width+5);
+     //c2.position(0, document.getElementById('colores').width+5);
 
      cx = c2.width/2;
      cy = c2.height/2;
@@ -68,7 +68,11 @@ var s2 = function(sketch) {
       sketch.background(0);
 
       sketch.stroke(255); sketch.strokeWeight(2); sketch.noFill();
-      sketch.circle(cx, cy, 15);
+      sketch.circle(cx, cy, 35);
+
+      sketch.stroke(255); sketch.strokeWeight(3);
+      sketch.line(cx, 0, cx, h);
+      sketch.line(0, cy, w, cy);
 
       if(sketch.mouseIsPressed &&
          sketch.mouseX<w &&
@@ -77,12 +81,8 @@ var s2 = function(sketch) {
          sketch.mouseY<h) {
         cx = sketch.mouseX;
         cy = sketch.mouseY;
-
-
-        sketch.stroke(255); sketch.strokeWeight(1);
-        sketch.line(cx, 0, cx, h);
-        sketch.line(0, cy, w, cy);
       }
+
    }
 }
 

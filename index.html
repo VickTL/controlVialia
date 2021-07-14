@@ -16,57 +16,50 @@
 
   <body>
 
-    <h1>Vialia</h1>
-    <h2>Juan Sevilla y Miguel Reyes</h2>
+    <div class="mainDiv g" id="titulo">
 
+    </div>
 
-
-
-
-    <!--prueba-->
-
-
-    <!--Numero de rios-->
-
-    <div class="numero">
-    <h3 class="numeroClase">Número de rios</h3>
-        <div class="slidecontainer">
-          <input type="range" value="25">
-      </div>
-
-
+        <!--Numero de rios-->
+    <div class="mainDiv p" id="slider1">
+        <div class="numero">
+            <div class="slidecontainer">
+              <input type="range" value="25">
+          </div>
+        </div>
     </div>
 
     <!--Grosor de los ríos-->
-    <h3 class="grosorClase">Grosor de los ríos</h3>
-    <div class="slidecontainer">
-        <input type="range" value="25">
+    <div class="mainDiv p" id="slider2">
+
+        <div class="slidecontainer">
+            <input type="range" value="25">
+        </div>
     </div>
 
+
     <!--Amplitud de onda-->
-    <h3 class="amplitudClase">Amplitud de onda</h3>
-    <div class="slidecontainer">
-  <input type="range" value="25">    </div>
+    <div class="mainDiv p" id="slider3">
+        <div class="slidecontainer">
+        <input type="range" value="25">    </div>
+    </div>
 
     <!-- Origen -->
-    <div id="origen">
+    <div class="mainDiv g" id="origen">
 
     </div>
 
     <!-- Colores -->
-    <div id="colores">
+    <div class="mainDiv g" id="colores">
 
     </div>
 
-  <!--  <input type="color">-->
-
-    <script src="control.js"></script>
-
     <!-- Reset -->
-    <button class="button button1">Reset</button>
-
-
+    <div class="mainDiv p" id="reset">
+        <button class="button">RESET</button>
+    </div>
 
   </body>
 
+  <script src="control.js"></script>
 </html>

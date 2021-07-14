@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -25,46 +28,82 @@ h2{
 h3{
 
   font-family: 'Amatic SC', cursive;
-  font-size: 406%;
+  font-size: 20px;
   margin-left: 4%;
   z-index: 1;
   color: black;
 
 }
 
-.numeroClase{
-    position: absolute;
-    top: 18%;
-    bottom: 82%;
+.mainDiv {
+    width: 100vw;
+    overflow: hidden;
+    background-color:black;
+    border: 2px solid white;
 }
 
-.grosorClase{
-    position: absolute;
-    top: 36%;
-    bottom: 64%;
+.g {
+    height: 20vh;
 }
 
-.amplitudClase{
-    position: absolute;
-    top: 55%;
-    bottom: 45%;
-
+.p {
+    height: 10vh;
 }
 
+#titulo {
+    background-image: url("img/Titulo.png");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+#slider1 {
+    background-image: url("img/Slider1.png");
+    background-size: 100% 100%;
+}
+
+#slider2 {
+    background-image: url("img/Slider2.png");
+    background-size: 100% 100%;
+}
+
+#slider3 {
+    background-image: url("img/Slider3.png");
+    background-size: 100% 100%;
+}
+
+button {
+  background: rgb(0,71,153);
+  background: linear-gradient(90deg, rgba(0,71,153,1) 0%, rgba(19,105,205,1) 79%, rgba(38,138,255,1) 100%);
+  
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  color: white;
+  border: 2px solid #346eeb;
+  width: 100%;
+  height: 100%;
+}
+
+button:hover {
+  background-color: #6897fc;
+  color: white;
+}
+
+/* Slider */
 input[type="range"] {
     margin: auto;
     -webkit-appearance: none;
     position: relative;
     overflow: hidden;
-    height: 10vh;
+    height: auto;
     width: 100%;
     cursor: pointer;
     border-radius: 0; /* iOS */
+    background: none;
 }
 
 ::-webkit-slider-runnable-track {
-    background: #ddd;
+    background: none;
 }
 
 /*
@@ -72,11 +111,12 @@ input[type="range"] {
  */
 ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 5%; /* 1 */
+    width: 0%; /* 1 */
     height: 10vh;
-    background: #fff;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
-    border: 2px solid #999; /* 1 */
+    background: black;
+    box-shadow: -100vw 0 0 100vw rgba(41, 171, 226, 27);
+    opacity: 40%;
+
 }
 
 ::-moz-range-track {
@@ -85,7 +125,7 @@ input[type="range"] {
 }
 
 ::-moz-range-thumb {
-    background: #fff;
+    background: none;
     height: 40px;
     width: 20px;
     border: 3px solid #999;
@@ -95,11 +135,12 @@ input[type="range"] {
 }
 
 ::-ms-fill-lower {
-    background: dodgerblue;
+    background: #29ABE2;
+    opacity: 27%;
 }
 
 ::-ms-thumb {
-    background: #fff;
+    background: none;
     border: 2px solid #999;
     height: 40px;
     width: 20px;
@@ -115,7 +156,7 @@ input[type="range"] {
 }
 
 ::-ms-track {
-    background: #ddd;
+    background: none;
     color: transparent;
     height: 40px;
     border: none;
@@ -125,165 +166,20 @@ input[type="range"] {
     display: none;
 }
 
-/*
-range {
-  display: inline-block;
-  margin: 36px 20px 20px
-}
-
-input[type=range] {
-  -webkit-appearance: none;
-  position: relative
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 300px;
-  height: 2px;
-  border: none;
-  border-radius: 3px
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 12px;
-  width: 12px;
-  border-radius: 510%;
-  background: #141414;
-  border: 2px solid #515151;
-  margin-top: -5px;
-  cursor: pointer
-}
-
-.focused::-webkit-slider-thumb {
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.15)
-}
-
-.clicked::-webkit-slider-thumb {
-  -webkit-transform: scale(1.5)
-}
-
-.disabled::-webkit-slider-thumb {
-  -webkit-transform: scale(0.9);
-  box-shadow: 0 0 0 3px #141414;
-  background: #515151 !important;
-  border-color: #515151 !important
-}
-
-input[type=range]:focus {
-  outline: none
-}
-
-.rangeM input[type=range].disabled::-webkit-slider-runnable-track {
-  background: #515151!important
-}
-
-.rangeM input[type=range]::-webkit-slider-thumb {
-  background: #3f51b5;
-  border-color: #3f51b5
-}
-
-.range:hover input[type=range]:before {
-  color: white;
-  content: '50';
-  position: absolute;
-  font-family: Roboto Slab;
-  top: -49px;
-  background: #3f51b5;
-  padding: 8px 0 3px;
-  font-size: 14px;
-  width: 30px;
-  text-align: center;
-  border-radius: 100% 100% 0 0
-}
-
-.range:hover input[type=range]:after {
-  content: '';
-  position: absolute;
-  top: -19px;
-  left: 50px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 8px solid #3f51b5;
-  font-family: Roboto Slab
-}
-
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  /*appearance: none;*/
-/*  width: 100%; /* Full-width */
-/*  height: 15vh; /* Specified height */
-/*  background: #adbbff; /* Grey background */
-/*  outline: none; /* Remove outline */
-/*  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-/*  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-/*  transition: opacity .2s;
-}
-*/
-/* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
 }
 
-.slider::-moz-range-thumb {
-  width: 55px;
-  height: 55px;
-  border-radius: 80%;
-  background: #6897fc;
-  cursor: pointer;
-}
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10vw;
   height: 15vh;
   /*border-radius: 50%;*/
-  background: #346eeb;
+  background: none;
   cursor: pointer;
 }
 
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
-}
-
-
-.button {
-  border: none;
-  color: white;
-  width: 100%;
-  padding-top: 12px ;
-  padding-bottom:12px ;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 86px;
-  margin: 22px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #346eeb;
-  float:
-}
-
-.button1:hover {
-  background-color: #6897fc;
-  color: white;
-}
-
-#colores{
-
-  width: 100%;
-  height: 20%;
-
-}
-
-#origen{
-
-  width: 100%;
-  height: 100%;
-
 }
