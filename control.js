@@ -87,3 +87,71 @@ var s2 = function(sketch) {
 }
 
 new p5(s2, 'origen');
+
+// Parte osc
+var oscPort = new osc.WebSocketPort({
+    url: "127.0.0.1:9000", // URL to your Web Socket server.
+    metadata: true
+});
+
+oscPort.on("ready", function () {
+    if( ) {
+        oscPort.send({
+            address: "/nParticulas",
+            args: [
+                {
+                    type: "f",
+                    value: 440
+                }
+            ]
+        });
+
+    }
+
+    oscPort.send({
+        address: "/velSumada",
+        args: [
+            {
+                type: "f",
+                value: 440
+            }
+        ]
+    });
+
+    document.getElementById("botonReset").onclick = function() {
+        oscPort.send({
+            address: "/restart"
+        });
+    }
+
+
+    oscPort.send({
+        address: "/tamParticulas",
+        args: [
+            {
+                type: "f",
+                value: 440
+            }
+        ]
+    });
+
+    oscPort.send({
+        address: "/colorParticulas",
+        args: [
+            {
+                type: "f",
+                value: 440
+            }
+        ]
+    });
+
+    oscPort.send({
+        address: "/cambiarOrigen",
+        args: [
+            {
+                type: "f",
+                value: 440
+            }
+        ]
+    });
+});

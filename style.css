@@ -51,7 +51,7 @@ h3{
 }
 
 #titulo {
-    background-image: url("img/Titulo.png");
+    background-image: url("img/titulo.png");
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@ h3{
 button {
   background: rgb(0,71,153);
   background: linear-gradient(90deg, rgba(0,71,153,1) 0%, rgba(19,105,205,1) 79%, rgba(38,138,255,1) 100%);
-  
+
   font-family: 'Poppins', sans-serif;
   font-size: 60px;
   color: white;
