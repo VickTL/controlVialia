@@ -90,26 +90,19 @@ new p5(s2, 'origen');
 
 // Parte osc
 var oscPort = new osc.WebSocketPort({
-    url: "127.0.0.1:9000", // URL to your Web Socket server.
+    url: "ws://localhost:9000", // URL to your Web Socket server.
     metadata: true
 });
 
+oscPort.open();
+console.log("abierto?");
+
+
 oscPort.on("ready", function () {
-    /* if( ) {
-        oscPort.send({
-            address: "/nParticulas",
-            args: [
-                {
-                    type: "f",
-                    value: 440
-                }
-            ]
-        });
-
-    }
+    console.log("hey");
 
     oscPort.send({
-        address: "/velSumada",
+        address: "/carrier/frequency",
         args: [
             {
                 type: "f",
@@ -117,41 +110,4 @@ oscPort.on("ready", function () {
             }
         ]
     });
-*/
-    document.getElementById("botonReset").onclick = function() {
-        oscPort.send({
-            address: "/restart"
-        });
-    }
-
-/*
-    oscPort.send({
-        address: "/tamParticulas",
-        args: [
-            {
-                type: "f",
-                value: 440
-            }
-        ]
-    });
-
-    oscPort.send({
-        address: "/colorParticulas",
-        args: [
-            {
-                type: "f",
-                value: 440
-            }
-        ]
-    });
-
-    oscPort.send({
-        address: "/cambiarOrigen",
-        args: [
-            {
-                type: "f",
-                value: 440
-            }
-        ]
-    }); */
 });

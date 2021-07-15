@@ -1,0 +1,8 @@
+{
+    "name": "VialiaControl",
+    "version": "1.0",
+    "dependencies": {
+        "osc": "2.4.1",
+        "osc-js": "^2.1.2"
+    }
+}
